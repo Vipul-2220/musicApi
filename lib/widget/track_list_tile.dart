@@ -28,6 +28,7 @@ class TrackListTile extends StatelessWidget {
             child: Container(
               // color: Colors.green,
               child: Row(
+                // mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   const Icon(Icons.library_music),
                   const SizedBox(
@@ -50,12 +51,12 @@ class TrackListTile extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(
-                            height: 10,
+                            height: 5,
                           ),
                           Text(
                             albumName,
-                            style: const TextStyle(
-                                color: Colors.grey, fontSize: 12),
+                            style: TextStyle(
+                                color: Colors.grey.shade700, fontSize: 12),
                           ),
                         ],
                       ),

@@ -34,7 +34,14 @@ class _TrackScreenState extends State<TrackScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.grey),
+      appBar: AppBar(
+        backgroundColor: Colors.grey[300],
+        title: const Text(
+          'Trending',
+          style: TextStyle(color: Colors.black),
+        ),
+        centerTitle: true,
+      ),
       body: isLoading
           ? const Center(
               child: CircularProgressIndicator(),
