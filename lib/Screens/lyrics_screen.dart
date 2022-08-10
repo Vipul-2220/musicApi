@@ -47,7 +47,7 @@ class _LyricsScreenState extends State<LyricsScreen> {
       appBar: AppBar(
         backgroundColor: Colors.grey[300],
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: Colors.black,
           ),
@@ -65,78 +65,80 @@ class _LyricsScreenState extends State<LyricsScreen> {
               child: CircularProgressIndicator(),
             )
           : trackDetails != null
-              ? Container(
-                  padding: const EdgeInsets.all(15),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Name',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(trackDetails!.trackName),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      const Text(
-                        'Artist Name',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(trackDetails!.artistName),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      const Text(
-                        'Album Name',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(trackDetails!.albumName),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      const Text(
-                        'Explicit',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(trackDetails!.explicit == 0 ? 'False' : 'True'),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      const Text(
-                        'Ratings',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(trackDetails!.trackRating.toString()),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      const Text(
-                        'Lyrics',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(trackLyrics!.lyricsBody),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                    ],
+              ? SingleChildScrollView(
+                  child: Container(
+                    padding: const EdgeInsets.all(15),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Name',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(trackDetails!.trackName),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        const Text(
+                          'Artist Name',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(trackDetails!.artistName),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        const Text(
+                          'Album Name',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(trackDetails!.albumName),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        const Text(
+                          'Explicit',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(trackDetails!.explicit == 0 ? 'False' : 'True'),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        const Text(
+                          'Ratings',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(trackDetails!.trackRating.toString()),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        const Text(
+                          'Lyrics',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(trackLyrics!.lyricsBody),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                      ],
+                    ),
                   ),
                 )
               : const Center(
