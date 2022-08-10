@@ -66,7 +66,7 @@ class _LyricsScreenState extends State<LyricsScreen> {
             )
           : trackDetails != null
               ? Container(
-                  padding: const EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(15),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
